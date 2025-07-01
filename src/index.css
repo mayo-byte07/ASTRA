@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f8fafc;
+    color: #18181B;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-astra-primary hover:bg-astra-secondary text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-soft tracking-wide text-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border-2 border-astra-primary text-astra-primary hover:bg-astra-primary hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-soft tracking-wide text-lg;
+  }
+  
+  .btn-accent {
+    @apply bg-astra-accent hover:bg-astra-primary text-astra-black font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-soft tracking-wide text-lg;
+  }
+  
+  .card {
+    @apply bg-white/90 backdrop-blur-lg border border-astra-glass rounded-3xl shadow-glass p-8 transition-all duration-300;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-astra-primary via-astra-secondary to-astra-accent;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-astra-primary to-astra-secondary bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-lg bg-white/80 border border-astra-glass shadow-glass;
+  }
+  
+  .voice-trigger-animation {
+    animation: voice-trigger 0.5s ease-in-out;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .bg-section {
+    @apply bg-white;
+  }
+  .bg-subtle {
+    @apply bg-astra-glass;
+  }
+  .text-main {
+    @apply text-astra-black;
+  }
+  .text-subtle {
+    @apply text-astra-secondary;
+  }
+  .border-main {
+    @apply border-astra-glass;
+  }
+} 
